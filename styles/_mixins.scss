@@ -1,0 +1,6 @@
+@mixin hero-background($image-url, $height) {
+    background-image: url($image-url);
+    background-size: cover;
+    background-position: center;
+    height: $height;
+}
