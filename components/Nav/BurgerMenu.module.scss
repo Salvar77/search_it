@@ -1,0 +1,125 @@
+@import "../../styles/colors";
+
+.hamburger {
+  padding: 15px 15px;
+
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.hamburgerContainer {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  top: 1rem;
+  right: 1rem;
+  height: 5rem;
+  width: 100%;
+  z-index: 100;
+  top: 4rem;
+}
+
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+.hamburger.isActive:hover {
+  opacity: 0.7;
+}
+.hamburger.isActive .hamburgerInner,
+.hamburger.isActive .hamburgerInner::before,
+.hamburger.isActive .hamburgerInner::after {
+  background-color: $blue-main;
+}
+
+.hamburgerBox {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+  transform: scale(0.7);
+}
+
+.hamburgerInner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburgerInner,
+.hamburgerInner::before,
+.hamburgerInner::after {
+  width: 40px;
+  height: 4px;
+  background-color: $white-smooth;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+.hamburgerInner::before,
+.hamburgerInner::after {
+  content: "";
+  display: block;
+}
+
+.hamburgerInner::before {
+  top: -10px;
+}
+
+.hamburgerInner::after {
+  bottom: -10px;
+}
+
+.hamburger__arrow.isActive .hamburgerInner::before {
+  transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1);
+}
+
+.hamburger__arrow.isActive .hamburgerInner::after {
+  transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1);
+}
+
+.spin {
+  transform-origin: center;
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.shopButton {
+  top: 1rem;
+  right: 4rem;
+
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  display: flex;
+  left: 2rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .hamburger {
+    display: none;
+  }
+
+  .hamburgerContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    right: 20rem;
+  }
+}

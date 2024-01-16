@@ -1,3 +1,26 @@
 $dark-smooth: #050505;
-$white-smooth: #faf6f6;
-$red-main: #f00b0bc0;
+$dark-smooth-hover: #0f0e0e;
+$grey-smooth: #c9c1c1;
+$white-smooth: #fcfcfc;
+$white-smooth-hover: #f4efef;
+$red-main: #ed0a0ac0;
+$blue-main: #3824ab;
+$blue-main: #4023df;
+
+$blue-after: #5b96ac;
+
+$light-blue-gradient: linear-gradient(
+  45deg,
+  rgba(41, 38, 37, 0.65),
+  rgba(46, 50, 52, 0.65)
+);
+$light-blue-gradient-solid: radial-gradient(
+  circle at top right,
+  rgb(18, 19, 21) 0%,
+  rgb(0, 212, 255) 100%
+);
+$blue-gradient-solid: linear-gradient(
+  45deg,
+  rgb(20, 105, 241),
+  rgb(42, 10, 184)
+);
