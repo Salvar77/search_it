@@ -1,8 +1,16 @@
 @import "../../styles/colors";
 
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+
 .hamburger {
   padding: 15px 15px;
-
+  display: block;
   cursor: pointer;
   transition-property: opacity, filter;
   transition-duration: 0.15s;
@@ -60,7 +68,7 @@
 .hamburgerInner::after {
   width: 40px;
   height: 4px;
-  background-color: $white-smooth;
+  background-color: $dark-smooth;
   border-radius: 4px;
   position: absolute;
   transition-property: transform;

@@ -4,7 +4,8 @@ const BurgerMenu = ({ isOpen, handleOpen }) => {
   const toggleActive = () => {
     handleOpen();
   };
-  <>
+
+  return (
     <div className={classes.hamburgerContainer}>
       <button
         className={`${classes.hamburger} ${classes.hamburger__arrow} ${
@@ -19,7 +20,7 @@ const BurgerMenu = ({ isOpen, handleOpen }) => {
         </span>
       </button>
     </div>
-  </>;
+  );
 };
 
 export default BurgerMenu;

@@ -1,5 +1,15 @@
 @import "./colors";
 
+@import "~hamburgers/_sass/hamburgers/hamburgers";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
@@ -7,6 +17,28 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Alkatra", sans-serif;
-  color: $white-smooth;
+  font-family: "Oxygen", sans-serif;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
+
+// .container {
+//   max-width: 1600px;
+//   margin: 0 auto;
+// }
+
+// #O-nas,
+// #usługi,
+// #galeria,
+// #kontakt {
+//   scroll-margin-top: 9rem; // Odpowiednie przesunięcie w górę
+// }
+
+// @media only screen and (max-width: 768px) {
+//   #O-nas,
+//   #usługi,
+//   #galeria,
+//   #kontakt {
+//     scroll-margin-top: 9rem;
+//   }
+// }
