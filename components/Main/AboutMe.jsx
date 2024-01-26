@@ -20,8 +20,11 @@ const AboutMe = () => {
           <h2 className={classes.aboutMe__header}>O mnie</h2>
           <p className={classes.aboutMe__text}>
             Jestem Łukasz. Web Developmentem zajmuje się od Września 2022 roku,
-            a firma Search IT zajmuje się tworzeniem stron WWW, oraz tworzeniem
-            aplikacji webowych, dostosowanych do potrzeb Twojej firmy.
+            a firma Search <span className={classes.span}> IT </span>zajmuje się
+            <span className={classes.span}> tworzeniem stron WWW</span>, oraz
+            <span className={classes.span}> aplikacji webowych</span>,
+            dostosowanych{" "}
+            <span className={classes.span}> do potrzeb Twojej firmy</span>.
           </p>
         </div>
         <div className={classes.aboutMe__boxesTwo}>
