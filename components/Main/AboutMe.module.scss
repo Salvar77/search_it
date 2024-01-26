@@ -1,0 +1,100 @@
+@import "../../styles/colors";
+
+.aboutMe {
+  &__boxes {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $white-smooth;
+
+    &One,
+    &Two,
+    &Three {
+      border: 1px solid $gold-main;
+      box-shadow: 0.2rem 0.4rem 2rem 0.2rem;
+      margin-bottom: 1rem;
+      border-radius: 0.6rem;
+      width: 100%;
+    }
+  }
+
+  &__header {
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+  }
+
+  &__subTitle {
+    margin: 1rem;
+  }
+
+  &__text {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  &__subTitle {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  &__additionalSkills {
+    p {
+      border: 1px solid black;
+      box-shadow: 0.4rem 0.1rem 0.9rem 0.1rem;
+      border-radius: 0.4rem;
+      background-color: $white-smooth-hover;
+      font-weight: bold;
+    }
+  }
+
+  &__mainSkills {
+    p {
+      border: 1px solid black;
+      box-shadow: 0.4rem 0.1rem 0.9rem 0.1rem;
+      border-radius: 0.4rem;
+      background-color: $white-smooth-hover;
+      font-weight: bold;
+    }
+  }
+}
+
+.aboutMe__boxes p {
+  //   background-color: $white-smooth;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.aboutMe__icon {
+  color: $gold-main;
+  height: 4rem;
+  width: 3rem;
+  margin: 0.4rem;
+}
+
+.aboutMe svg {
+  max-height: 5rem;
+  max-width: 10rem;
+}
+
+@media (min-width: 992px) {
+  .aboutMe {
+    &__boxes {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &One,
+    &Two,
+    &Three {
+      width: 50%;
+      margin-bottom: 0;
+      &:first-child {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

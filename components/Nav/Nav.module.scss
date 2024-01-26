@@ -19,10 +19,10 @@
     flex-direction: column;
     align-items: center;
     z-index: 100;
-    background-color: $dark-smooth;
+    background-color: $dark-smooth-hover;
 
     &:hover {
-      color: $blue-main;
+      color: $gold-main;
     }
   }
 
@@ -56,10 +56,16 @@
   color: $white-smooth;
   transition: color 0.3s ease;
   font-size: 1.8rem;
+  font-weight: bold;
 }
 
 .nav ul li a:hover {
-  color: $blue-main;
+  color: $gold-main;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 768px) {
@@ -78,11 +84,12 @@
     transform: none;
     left: 0;
     top: 0;
-    background-color: $dark-smooth;
+    background-color: $grey-smooth;
 
     opacity: 0.9;
     z-index: 1000;
-    box-shadow: 2rem 0.5rem 0.5rem 0.2rem $blue-main;
+    // box-shadow: 2rem 0.5rem 0.5rem 0.2rem $gold-main;
+    border: 0.6rem solid $gold-main;
 
     &::before,
     &::after {
@@ -120,5 +127,9 @@
       opacity: 1;
       transform: scale(1) translateY(0);
     }
+  }
+
+  .menu {
+    flex-direction: row;
   }
 }

@@ -1,0 +1,19 @@
+@import "../../styles/colors";
+
+.logo {
+  position: fixed;
+  top: -1.23rem;
+  left: -7rem;
+  // max-height: 13rem;
+  // max-width: 13rem;
+  z-index: 10000;
+}
+
+@media (min-width: 992px) {
+  .logo {
+    left: -7rem;
+    top: 0.8rem;
+    max-height: 15rem;
+    width: auto;
+  }
+}
