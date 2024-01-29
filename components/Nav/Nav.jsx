@@ -16,7 +16,7 @@ const Nav = ({ isOpen }) => {
               <Link href="#">O mnie</Link>
             </li>
             <li>
-              <Link href="#">Projekty</Link>
+              <Link href="/#projekty">Projekty</Link>
             </li>
             <li>
               <Link href="#">Kontakt</Link>
