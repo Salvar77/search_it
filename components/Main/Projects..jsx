@@ -18,9 +18,12 @@ const Projects = () => {
         <div className={classes.projects__boxOne}>
           <div className={classes.projects__boxImg}>
             <Image src={photo1} alt="widok i opis projektów firmowych"></Image>
-            <button className={`${classes.uiBtn} ${classes.imageOverlay}`}>
+            <Link
+              href="#"
+              className={`${classes.uiBtn} ${classes.imageOverlay}`}
+            >
               <span>Zobacz</span>
-            </button>
+            </Link>
           </div>
           <h3>Cube</h3>
           <ul className={classes.projects__boxText}>
@@ -45,9 +48,12 @@ const Projects = () => {
         <div className={classes.projects__boxTwo}>
           <div className={classes.projects__boxImg}>
             <Image src={photo1} alt="widok i opis projektów firmowych"></Image>
-            <button className={`${classes.uiBtn} ${classes.imageOverlay}`}>
+            <Link
+              href="#"
+              className={`${classes.uiBtn} ${classes.imageOverlay}`}
+            >
               <span>Zobacz</span>
-            </button>
+            </Link>
           </div>
           <h3>Universe</h3>
           <ul className={classes.projects__boxText}>
@@ -68,9 +74,12 @@ const Projects = () => {
         <div className={classes.projects__boxThree}>
           <div className={classes.projects__boxImg}>
             <Image src={photo1} alt="widok i opis projektów firmowych"></Image>
-            <button className={`${classes.uiBtn} ${classes.imageOverlay}`}>
+            <Link
+              href="#"
+              className={`${classes.uiBtn} ${classes.imageOverlay}`}
+            >
               <span>Zobacz</span>
-            </button>
+            </Link>
           </div>
           <h3>Projekt 3</h3>
           <ul className={classes.projects__boxText}>

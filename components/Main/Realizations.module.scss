@@ -1,68 +1,41 @@
 @import "../../styles/colors";
 
-.projects {
+.realizations {
+  position: relative;
+  padding: 2rem;
   h2 {
     text-align: center;
+    padding: 1rem;
   }
-
-  h3 {
-    color: $dark-smooth;
-    text-align: center;
-  }
-
   &__box {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 2rem;
     padding: 1rem;
-    margin: 1rem;
-    // border: 1px solid black;
+    box-shadow: 0.2rem 0.4rem 2rem 0.2rem;
+    background-color: rgba($grey-smooth, 0.4);
     border-radius: 0.4rem;
+    width: 100%;
 
-    &One,
-    &Two,
-    &Three {
-      font-size: 2rem;
-      text-align: center;
-      // border: 1px solid black;
-      box-shadow: 0.2rem 0.4rem 2rem 0.2rem;
-      background-color: rgba($grey-smooth, 0.4);
-      border-radius: 0.4rem;
-      width: 100%;
-    }
+    margin: 1rem auto;
 
     &Text {
-      background-color: rgba($grey-smooth, 0.5);
-      box-shadow: 0.2rem 0.4rem 2rem 0.2rem;
-      margin: 1rem;
-      padding: 1rem;
       color: $white-smooth;
-      // border: 1px solid black;
-      border-radius: 0.4rem;
-      li {
-        list-style-type: none;
-      }
+      padding: 1rem;
+      margin: 1rem;
     }
 
     &Img {
-      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       max-width: 100%;
     }
-
-    &Icon {
-      color: $red-main;
-      margin: 0.4rem;
-    }
   }
 }
 
-.projects__boxImg img {
+.realizations__boxImg img {
   max-width: 100%;
   height: auto;
   border-radius: 0.4rem;
@@ -221,23 +194,15 @@
 }
 
 @media (min-width: 768px) {
-  .projects {
-    &__header {
+  .realizations {
+    h2 {
       font-size: 3rem;
     }
-    h3 {
+
+    &__boxText {
       font-size: 3rem;
-    }
-    &__box {
-      &Text {
-        font-size: 3rem;
-      }
-      &Icon {
-        font-size: 3rem;
-      }
     }
   }
-
   .uiBtn {
     --btn-padding: 2rem 2.5rem;
     --font-size: 2.4rem;
@@ -245,12 +210,11 @@
 }
 
 @media (min-width: 992px) {
-  .projects {
+  .realizations {
     &__box {
-      flex-direction: row;
+      max-width: 70rem;
     }
   }
-
   .uiBtn {
     --btn-padding: 1.5rem 2.5rem;
     --font-size: 2.5rem;

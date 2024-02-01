@@ -1,81 +1,110 @@
 @import "../../styles/colors";
 
-.projects {
+.contactSection {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding-top: 2rem;
+  padding: 2rem;
+  width: 100%;
+  font-size: 1.8rem;
+  color: $white-smooth;
+
   h2 {
+    margin-bottom: 1rem;
     text-align: center;
+    color: $red-main; // Czerwony kolor dla nagłówka
+    font-weight: bold; // Pogrubienie nagłówka
   }
 
-  h3 {
-    color: $dark-smooth;
-    text-align: center;
-  }
-
-  &__box {
+  .contactInfo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1rem;
-    margin: 1rem;
-    // border: 1px solid black;
+    // width: 100%;
+    text-decoration: none;
+    box-shadow: 0.2rem 0.4rem 2rem 0.2rem;
+    background-color: rgba($grey-smooth, 0.7);
     border-radius: 0.4rem;
+    padding: 2rem;
+    font-weight: bold;
 
-    &One,
-    &Two,
-    &Three {
-      font-size: 2rem;
-      text-align: center;
-      // border: 1px solid black;
-      box-shadow: 0.2rem 0.4rem 2rem 0.2rem;
-      background-color: rgba($grey-smooth, 0.4);
-      border-radius: 0.4rem;
-      width: 100%;
+    p {
+      // box-shadow: 0.2rem 0.4rem 2rem 0.2rem;
+      background-color: rgba($grey-smooth, 0.7);
+      margin-bottom: 0.5rem;
+      text-decoration: none;
+      &:nth-child(4) {
+        color: $red-main;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .contactInfo,
+  .contactForm {
+    box-shadow: 0.2rem 0.4rem 2rem 0.2rem rgba(0, 0, 0, 0.9);
+    background-color: rgba($grey-smooth, 0.4);
+  }
+
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 0.4rem;
+    min-width: 100%;
+    max-width: 100%;
+
+    h2 {
+      color: $dark-smooth;
     }
 
-    &Text {
-      background-color: rgba($grey-smooth, 0.5);
-      box-shadow: 0.2rem 0.4rem 2rem 0.2rem;
-      margin: 1rem;
-      padding: 1rem;
-      color: $white-smooth;
-      // border: 1px solid black;
+    p {
+      font-weight: bold;
+      color: $dark-smooth;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      min-width: 100%;
+      max-width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
       border-radius: 0.4rem;
-      li {
-        list-style-type: none;
+      background-color: rgba($white-smooth, 0.5);
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      box-shadow: 0.2rem 0.4rem 2rem 0.2rem;
+
+      &:focus {
+        outline: none;
+        border-color: $gold-main; // Kolor obramowania podczas fokusowania
       }
     }
 
-    &Img {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      max-width: 100%;
-    }
-
-    &Icon {
-      color: $red-main;
-      margin: 0.4rem;
+    button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border-radius: 0.4rem;
+      font-weight: bold;
+      &:hover {
+        background-color: $gold-main;
+      }
     }
   }
 }
 
-.projects__boxImg img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 0.4rem;
-  padding: 1rem;
-}
-
-.imageOverlay {
-  text-decoration: none;
-  color: $white-smooth;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.mapWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1.4rem;
 }
 
 .uiBtn {
@@ -221,38 +250,35 @@
 }
 
 @media (min-width: 768px) {
-  .projects {
-    &__header {
-      font-size: 3rem;
+  .contactSection {
+    .contactInfo {
+      font-size: 2.4rem;
     }
-    h3 {
-      font-size: 3rem;
+    .contactForm {
+      font-size: 2.4rem;
     }
-    &__box {
-      &Text {
-        font-size: 3rem;
-      }
-      &Icon {
-        font-size: 3rem;
-      }
-    }
-  }
-
-  .uiBtn {
-    --btn-padding: 2rem 2.5rem;
-    --font-size: 2.4rem;
   }
 }
 
 @media (min-width: 992px) {
-  .projects {
-    &__box {
-      flex-direction: row;
+  .contactSection {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    .contactInfo {
+      font-size: 2.6 rem;
+    }
+
+    .contactForm {
+      font-size: 2.6 rem;
     }
   }
 
-  .uiBtn {
-    --btn-padding: 1.5rem 2.5rem;
-    --font-size: 2.5rem;
+  .mapWrapper {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
   }
 }

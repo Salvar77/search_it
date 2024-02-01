@@ -84,9 +84,7 @@
     transform: none;
     left: 0;
     top: 0;
-    background-color: $grey-smooth;
-
-    opacity: 0.9;
+    background-color: rgba($grey-smooth, 0.9);
     z-index: 1000;
     // box-shadow: 2rem 0.5rem 0.5rem 0.2rem $gold-main;
     border: 0.6rem solid $gold-main;

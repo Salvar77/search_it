@@ -39,6 +39,7 @@
     margin: 1rem;
     color: $white-smooth;
     font-weight: bold;
+    background-color: rgba($grey-smooth, 0.5);
     box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem;
     border-radius: 0.4rem;
     background-color: $grey-smooth(0.9);
@@ -51,7 +52,7 @@
 
   &__additionalSkills {
     p {
-      // border: 1px solid rgba(150, 150, 150, 0.1);
+      background-color: rgba($grey-smooth, 0.5);
       box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem;
       border-radius: 0.4rem;
       background-color: $grey-smooth(0.9);
@@ -62,7 +63,7 @@
 
   &__mainSkills {
     p {
-      // border: 1px solid rgba(150, 150, 150, 0.1);
+      background-color: rgba($grey-smooth, 0.5);
       box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem;
       border-radius: 0.4rem;
       background-color: $grey-smooth(0.9);
