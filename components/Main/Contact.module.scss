@@ -80,7 +80,7 @@
 
       &:focus {
         outline: none;
-        border-color: $gold-main; // Kolor obramowania podczas fokusowania
+        // border-color: $gold-main;
       }
     }
 
@@ -93,9 +93,9 @@
       transition: background-color 0.3s ease;
       border-radius: 0.4rem;
       font-weight: bold;
-      &:hover {
-        background-color: $gold-main;
-      }
+      // &:hover {
+      //   // background-color: $gold-main;
+      // }
     }
   }
 }
@@ -252,10 +252,14 @@
 @media (min-width: 768px) {
   .contactSection {
     .contactInfo {
-      font-size: 2.4rem;
+      font-size: 2.2rem;
     }
     .contactForm {
-      font-size: 2.4rem;
+      font-size: 2.2rem;
+
+      button {
+        font-size: 2.2rem;
+      }
     }
   }
 }
@@ -263,14 +267,24 @@
 @media (min-width: 992px) {
   .contactSection {
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    align-items: flex-start;
 
     .contactInfo {
-      font-size: 2.6 rem;
+      p {
+        font-size: 2.6rem;
+      }
+      h2 {
+        font-size: 3rem;
+      }
     }
 
     .contactForm {
-      font-size: 2.6 rem;
+      p {
+        font-size: 2.6rem;
+      }
+      h2 {
+        font-size: 3rem;
+      }
     }
   }
 

@@ -1,45 +1,104 @@
 @import "../../styles/colors";
 
 .realizations {
-  position: relative;
+  // position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   padding: 2rem;
   h2 {
     text-align: center;
     padding: 1rem;
   }
+
   &__box {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
-    box-shadow: 0.2rem 0.4rem 2rem 0.2rem;
-    background-color: rgba($grey-smooth, 0.4);
-    border-radius: 0.4rem;
-    width: 100%;
+    // padding: 1rem;
+
+    border-radius: 0.8rem;
+    // width: 100%;
 
     margin: 1rem auto;
 
-    &Text {
-      color: $white-smooth;
-      padding: 1rem;
-      margin: 1rem;
+    &One {
+      font-size: 2rem;
+      text-align: center;
+      border: 1px solid black;
+      box-shadow: 0.2rem 0.4rem 2rem 0.2rem;
+      background-color: rgba($grey-smooth, 0.4);
+      border-radius: 0.4rem;
+      width: 100%;
+
+      p {
+        color: $white-smooth;
+        margin: 1rem;
+        padding: 1rem;
+        background-color: rgba($grey-smooth, 0.5);
+        box-shadow: 0.2rem 0.4rem 2rem 0.2rem;
+        border-radius: 0.4rem;
+
+        span {
+          color: $red-main;
+          font-weight: bold;
+        }
+      }
     }
 
     &Img {
+      position: relative;
+      padding: 0.2rem;
+
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      max-width: 100%;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          to left bottom,
+          rgba(228, 82, 45, 0.4),
+          rgba(212, 177, 21, 0.717)
+        );
+        z-index: 1;
+      }
+    }
+
+    &Icon {
+      color: $red-main;
+      margin: 0.4rem;
+      font-size: 2rem;
+    }
+  }
+
+  &__boxOne {
+    font-size: 2rem;
+    h3 {
+      font-size: 2.6rem;
+      text-align: center;
     }
   }
 }
 
 .realizations__boxImg img {
+  display: flex;
+  align-items: center;
   max-width: 100%;
-  height: auto;
+  max-height: 30rem;
   border-radius: 0.4rem;
-  padding: 1rem;
+  // padding: 1rem;
+
+  @media (min-width: 992px) {
+    min-width: 100%;
+    max-height: 100%;
+  }
 }
 
 .imageOverlay {
@@ -67,6 +126,7 @@
   --font-weight: 600;
   --font-family: Menlo, Roboto Mono, monospace;
   border-radius: 0.4rem;
+  z-index: 100;
   /* 👆 this field should not be empty */
 }
 

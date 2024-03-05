@@ -7,7 +7,9 @@ import { SiNextdotjs } from "react-icons/si";
 import { FaCube } from "react-icons/fa";
 import { CiRoute } from "react-icons/ci";
 import Image from "next/image";
-import photo1 from "../../assets/image/project-project.jpg";
+import photo1 from "../../assets/image/cubes.jpg";
+import photo2 from "../../assets/image/about-blackholes-side-fifth.jpg";
+import photo3 from "../../assets/image/naga_640.jpg";
 import Link from "next/link";
 
 const Projects = () => {
@@ -17,15 +19,19 @@ const Projects = () => {
       <div className={classes.projects__box}>
         <div className={classes.projects__boxOne}>
           <div className={classes.projects__boxImg}>
-            <Image src={photo1} alt="widok i opis projektów firmowych"></Image>
+            <Image
+              src={photo1}
+              alt="widok i opis projektów firmowych"
+              className={classes.customImage}
+            ></Image>
             <Link
-              href="#"
+              href="https://cube-self.vercel.app/"
               className={`${classes.uiBtn} ${classes.imageOverlay}`}
             >
               <span>Zobacz</span>
             </Link>
           </div>
-          <h3>Cube</h3>
+          <h3>3D Cube</h3>
           <ul className={classes.projects__boxText}>
             <li>
               {" "}
@@ -47,15 +53,19 @@ const Projects = () => {
         </div>
         <div className={classes.projects__boxTwo}>
           <div className={classes.projects__boxImg}>
-            <Image src={photo1} alt="widok i opis projektów firmowych"></Image>
+            <Image
+              src={photo2}
+              alt="widok i opis projektów firmowych"
+              className={classes.customImage}
+            ></Image>
             <Link
-              href="#"
+              href="https://universe-alpha.vercel.app/"
               className={`${classes.uiBtn} ${classes.imageOverlay}`}
             >
               <span>Zobacz</span>
             </Link>
           </div>
-          <h3>Universe</h3>
+          <h3>Universe Explorer</h3>
           <ul className={classes.projects__boxText}>
             <li>
               {" "}
@@ -73,15 +83,19 @@ const Projects = () => {
         </div>
         <div className={classes.projects__boxThree}>
           <div className={classes.projects__boxImg}>
-            <Image src={photo1} alt="widok i opis projektów firmowych"></Image>
+            <Image
+              src={photo3}
+              alt="widok i opis projektów firmowych"
+              className={classes.customImage}
+            ></Image>
             <Link
-              href="#"
+              href="https://first-app-blond.vercel.app/"
               className={`${classes.uiBtn} ${classes.imageOverlay}`}
             >
               <span>Zobacz</span>
             </Link>
           </div>
-          <h3>Projekt 3</h3>
+          <h3>ProtoShop Next</h3>
           <ul className={classes.projects__boxText}>
             <li>
               {" "}

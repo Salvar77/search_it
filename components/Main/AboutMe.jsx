@@ -14,7 +14,7 @@ import classes from "./AboutMe.module.scss";
 
 const AboutMe = () => {
   return (
-    <section id="skills" className={classes.aboutMe}>
+    <section id="O-mnie" className={classes.aboutMe}>
       <div className={classes.aboutMe__boxes}>
         <div className={classes.aboutMe__boxesOne}>
           <h2 className={classes.aboutMe__header}>O mnie</h2>

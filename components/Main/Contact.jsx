@@ -58,7 +58,7 @@ const Contact = () => {
         <p>E-mail: lukaszkus77@gmail.com</p>
       </div>
       <form className={classes.contactForm} onSubmit={handleSubmit}>
-        <h2>Prześlij wiadomość</h2>
+        <h2>Wyślij wiadomość</h2>
         <p>Twoje imię</p>
         <input
           type="text"
@@ -85,7 +85,9 @@ const Contact = () => {
           onChange={handleChange}
           required
         ></textarea>
-        <button type="submit">Wyślij</button>
+        <button href="#" className={classes.uiBtn}>
+          <span>Wyślij</span>
+        </button>
       </form>
 
       {showModal && (
@@ -99,7 +101,7 @@ const Contact = () => {
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2529.112846281092!2d17.8973408!3d50.6621653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47105388a05cb53f%3A0xdcd59a4c8236d86a!2sWojska%20Polskiego%201%2F22%2C%2045-020%20Opole!5e0!3m2!1spl!2spl!4v1706810974937!5m2!1spl!2spl"
           width="100%"
-          height="450"
+          height="350"
           style={{ border: 0 }}
           allowFullScreen=""
           loading="lazy"
