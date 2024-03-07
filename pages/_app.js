@@ -19,7 +19,10 @@ export default function App({ Component, pageProps }) {
         <Nav isOpen={isOpen} toggleNav={toggleNav} />
         <BurgerMenu isOpen={isOpen} handleOpen={toggleNav} />
       </header>
-      <Component {...pageProps} />
+      <div className="app-background">
+        {" "}
+        <Component {...pageProps} />
+      </div>
 
       <Footer />
     </>
