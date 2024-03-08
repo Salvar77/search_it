@@ -16,8 +16,8 @@ export default function Home() {
       <Hero />
       <div className="container">
         <AboutMe />
-        <Projects />
         <Realizations />
+        <Projects />
         <Contact />
       </div>
     </>

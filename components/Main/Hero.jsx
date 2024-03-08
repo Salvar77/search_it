@@ -51,8 +51,8 @@ const Hero = () => {
           Search <span className={classes.hero__title__span}>IT</span>
         </h1>
         <p>Usługi tworzenia stron WWW oraz aplikacji webowych</p>
-        <Link href="#projekty" className={classes.button}>
-          Projekty
+        <Link href="#realizacje" className={classes.button}>
+          Realizacje
         </Link>
       </div>
     </section>
