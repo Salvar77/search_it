@@ -25,7 +25,7 @@ const Projects = () => {
               className={classes.customImage}
             ></Image>
             <Link
-              href="https://cube-self.vercel.app/"
+              href="https://cube-cube.vercel.app/"
               className={`${classes.uiBtn} ${classes.imageOverlay}`}
             >
               <span>Zobacz</span>
