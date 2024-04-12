@@ -2,16 +2,17 @@ import classes from "./Logo.module.scss";
 import Image from "next/image";
 import logo from "../../assets/image/logo.svg";
 
-const Logo = () => {
+const Logo = ({ showLogo }) => {
+  const logoStyle = {
+    opacity: showLogo ? 1 : 0,
+    transform: showLogo ? "translateY(0)" : "translateY(-20px)",
+    transition: "opacity 0.5s ease, transform 0.5s ease",
+  };
+
   return (
-    <Image
-      className={classes.logo}
-      src={logo}
-      alt="Logo firmy Search IT"
-      priority
-      width={195}
-      height={195}
-    />
+    <div style={logoStyle} className={classes.logo}>
+      <Image src={logo} alt="Logo firmy Search IT" priority />
+    </div>
   );
 };
 

@@ -28,6 +28,10 @@ body {
   margin: 0 auto;
 }
 
+.nav__elementToHide {
+  transition: 0.3s;
+}
+
 .app-background::before {
   content: "";
   position: fixed;
