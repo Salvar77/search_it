@@ -25,17 +25,17 @@ const Contact = () => {
 
       const data = await response.json();
       if (response.ok) {
-        setMessageStatus("Wiadomość wysłana pomyślnie!");
+        setMessageStatus("success:Wiadomość wysłana pomyślnie!");
         console.log("Wiadomość wysłana: ", data.message);
       } else {
-        setMessageStatus("Wystąpił błąd przy wysyłaniu wiadomości.");
+        setMessageStatus("error:Wystąpił błąd przy wysyłaniu wiadomości.");
         console.error("Błąd wysyłania: ", data.error);
       }
-      setShowModal(true); // Dodaj tę linię, aby wyświetlić modal
+      setShowModal(true);
     } catch (error) {
-      setMessageStatus("Wystąpił błąd przy wysyłaniu wiadomości.");
+      setMessageStatus("error:Wystąpił błąd przy wysyłaniu wiadomości.");
       console.error("Błąd: ", error);
-      setShowModal(true); // Dodaj tę linię, aby wyświetlić modal również w przypadku błędu
+      setShowModal(true);
     }
   };
 
@@ -55,7 +55,8 @@ const Contact = () => {
         <p>Ulica: Wojska Polskiego 1-3/40</p>
         <p>Miasto: Opole</p>
         <p>Telefon: 694004530</p>
-        <p>E-mail: lukaszkus77@gmail.com</p>
+        <p>E-mail:</p>
+        <p>contact@searchit.pl</p>
       </div>
       <form className={classes.contactForm} onSubmit={handleSubmit}>
         <h2>Wyślij wiadomość</h2>
@@ -93,7 +94,17 @@ const Contact = () => {
       {showModal && (
         <div className={classes.modal} onClick={closeModal}>
           <div className={classes.modalContent}>
-            {messageStatus && <p>{messageStatus}</p>}
+            {messageStatus && (
+              <p
+                className={
+                  messageStatus.startsWith("success:")
+                    ? classes.successMessage
+                    : classes.errorMessage
+                }
+              >
+                {messageStatus.split(":")[1]}
+              </p>
+            )}
           </div>
         </div>
       )}

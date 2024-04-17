@@ -21,6 +21,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     // width: 100%;
     text-decoration: none;
     box-shadow: 0.2rem 0.4rem 2rem 0.2rem;
@@ -34,11 +35,47 @@
       background-color: rgba($grey-smooth, 0.7);
       margin-bottom: 0.5rem;
       text-decoration: none;
-      &:nth-child(4) {
+      &:nth-child(4),
+      &:nth-child(6) {
         color: $red-main;
         font-weight: bold;
       }
     }
+  }
+
+  .successMessage,
+  .errorMessage {
+    position: fixed; // Elementy są umieszczone względem okna przeglądarki
+    top: 0;
+    left: 0;
+    width: 100%; // Szerokość na całą szerokość ekranu
+    height: 100%; // Wysokość na całą wysokość ekranu
+    display: flex;
+    align-items: center; // Centruje treść w pionie
+    justify-content: center; // Centruje treść w poziomie
+    color: $white-smooth;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 1050;
+    padding: 2rem;
+  }
+
+  .successMessage {
+    background-color: rgba(
+      34,
+      139,
+      34,
+      0.9
+    ); // Zielony z lekką przezroczystością
+  }
+
+  .errorMessage {
+    background-color: rgba(
+      220,
+      20,
+      60,
+      0.9
+    ); // Czerwony z lekką przezroczystością
   }
 
   .contactInfo,
