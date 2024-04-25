@@ -10,7 +10,14 @@ export default function Home() {
     <>
       <Head>
         <title>Search IT</title>
-        <meta name="description" content="Search IT" />
+        <meta
+          property="og:image"
+          content="https://www.searchit.pl/metafoto.jpg"
+        />
+        <meta
+          name="description"
+          content="Search IT - Usługi tworzenia stron i aplikacji webowych"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Hero />
