@@ -7,23 +7,28 @@
   align-items: center;
 
   padding: 2rem;
+
   h2 {
     text-align: center;
     padding: 1rem;
   }
+
+  // h3 {
+  //   color: $white-smooth;
+  // }
 
   &__box {
     display: flex;
     flex-direction: column;
     align-items: center;
     // padding: 1rem;
-
+    gap: 2rem;
     border-radius: 0.8rem;
     // width: 100%;
 
     margin: 1rem auto;
 
-    &One {
+    &OT {
       font-size: 2rem;
       text-align: center;
       border: 1px solid black;
@@ -31,6 +36,7 @@
       background-color: rgba($grey-smooth, 0.4);
       border-radius: 0.4rem;
       width: 100%;
+      // min-height: 100%;
 
       p {
         color: $white-smooth;
@@ -50,10 +56,6 @@
     &Img {
       position: relative;
       padding: 0.2rem;
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
 
       &::before {
         content: "";
@@ -82,22 +84,24 @@
     font-size: 2rem;
     h3 {
       font-size: 2.6rem;
-      text-align: center;
     }
   }
 }
 
-.realizations__boxImg img {
+.realizations__boxImg {
   display: flex;
-  align-items: center;
-  max-width: 100%;
-  max-height: 30rem;
-  border-radius: 0.4rem;
-  // padding: 1rem;
 
-  @media (min-width: 992px) {
-    min-width: 100%;
-    max-height: 100%;
+  img {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    max-height: 20rem;
+
+    @media (min-width: 992px) {
+      min-width: 100%;
+      min-height: 100%;
+      max-height: 40rem;
+    }
   }
 }
 
@@ -272,7 +276,11 @@
 @media (min-width: 992px) {
   .realizations {
     &__box {
-      max-width: 70rem;
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      // max-width: 50rem;
+      min-height: 100%;
     }
   }
   .uiBtn {
