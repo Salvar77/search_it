@@ -28,6 +28,23 @@ body {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 992px) {
+  .slick-list {
+    padding: 0.5rem 0.1rem !important;
+    margin-right: 2rem;
+  }
+
+  .slick-track {
+    display: flex !important;
+    gap: 15px !important;
+  }
+
+  .slick-slide {
+    padding: 0.2rem 0.5rem !important;
+    margin-right: 1.4rem;
+  }
+}
+
 .app-background::before {
   content: "";
   position: fixed;

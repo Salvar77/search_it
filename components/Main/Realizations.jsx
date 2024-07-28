@@ -3,13 +3,6 @@ import classes from "./Realizations.module.scss";
 import Image from "next/image";
 import photo1 from "../../assets/image/hero2_640.jpg";
 import photo2 from "../../assets/image/seasun.jpg";
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3Alt } from "react-icons/fa";
-import { FaReact } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io5";
-import { SiNextdotjs } from "react-icons/si";
-import { FaCube } from "react-icons/fa";
-import { CiRoute } from "react-icons/ci";
 
 const Realizations = () => {
   return (
@@ -28,7 +21,7 @@ const Realizations = () => {
               href="https://www.kabetintleather.pl/"
               className={`${classes.uiBtn} ${classes.imageOverlay}`}
             >
-              <span>Zobacz</span>
+              <span>Przejdź </span>
             </Link>
           </div>
 
@@ -51,7 +44,7 @@ const Realizations = () => {
               href="https://www.seasunsarbinowo.pl/"
               className={`${classes.uiBtn} ${classes.imageOverlay}`}
             >
-              <span>Zobacz</span>
+              <span>Przejdź</span>
             </Link>
           </div>
 
