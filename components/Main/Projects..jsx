@@ -14,6 +14,7 @@ import ecommerceAdminPanel from "../../assets/image/efinal1.png";
 import Link from "next/link";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
 
 const Projects = () => {
   const settings = {
@@ -24,16 +25,16 @@ const Projects = () => {
     mobileFirst: true,
     responsive: [
       {
-        breakpoint: 992,
+        breakpoint: 692,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 900,
+        breakpoint: 1050,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -188,7 +189,7 @@ const SampleNextArrow = (props) => {
       className={`${classes.slickArrow} ${classes.slickNext}`}
       onClick={onClick}
     >
-      &#10095;
+      <FaArrowCircleRight className={classes.arrowIcon} />
     </div>
   );
 };
@@ -200,7 +201,7 @@ const SamplePrevArrow = (props) => {
       className={`${classes.slickArrow} ${classes.slickPrev}`}
       onClick={onClick}
     >
-      &#10094;
+      <FaArrowCircleLeft className={classes.arrowIcon} />
     </div>
   );
 };

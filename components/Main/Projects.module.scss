@@ -175,13 +175,12 @@
 
 .slickArrow {
   display: block;
-  width: 30px;
-  height: 30px;
+
   z-index: 2;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
+  // background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   text-align: center;
@@ -189,10 +188,13 @@
   cursor: pointer;
 }
 
+.arrowIcon {
+  font-size: 3rem;
+}
+
 .slickPrev {
   left: 1.5rem;
-  border-radius: 25%;
-  background-color: $dark-smooth;
+
   transition: color 0.3s;
 
   &:hover {
@@ -202,8 +204,7 @@
 
 .slickNext {
   right: 1.5rem;
-  border-radius: 25%;
-  background-color: $dark-smooth;
+
   transition: color 0.3s;
 
   &:hover {
