@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Search IT</title>
+        <title>Search IT - Usługi tworzenia stron i aplikacji webowych.</title>
         <meta
           property="og:image"
           content="https://www.searchit.pl/metafoto.jpg"

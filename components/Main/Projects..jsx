@@ -21,20 +21,22 @@ const Projects = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-
+    mobileFirst: true,
     responsive: [
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 2000,
-          arrows: false,
-          mobileFirst: true,
         },
       },
-
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
       {
         breakpoint: 480,
         settings: {
