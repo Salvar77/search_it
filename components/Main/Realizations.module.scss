@@ -88,6 +88,7 @@
     background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
+
     align-items: center;
     animation: fadeIn 0.3s ease-in-out;
   }
@@ -99,8 +100,11 @@
     border-radius: 0.4rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     width: 80%;
+    // background-color: rgba($grey-smooth, 0.5);
+
     max-width: 600px;
     position: relative;
+
     animation: slideIn 0.4s ease-in-out;
   }
 
