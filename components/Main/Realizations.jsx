@@ -102,7 +102,7 @@ const Realizations = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <span className={classes.close} onClick={closeModal}>
-              &times;
+              <i className="fa fa-times"></i>
             </span>
             <Image
               src={vcardFazar}
