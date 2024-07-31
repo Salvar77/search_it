@@ -118,6 +118,13 @@
     cursor: pointer;
     transition: color 0.3s ease;
 
+    &:focus,
+    &:active {
+      outline: none; // Usuwa domyślny kontur, który może być wyświetlany podczas kliknięcia
+      color: $color-on-click; // Możesz tu ustawić kolor, który ma być widoczny przy kliknięciu, lub usunąć tę linię
+    }
+
+    // Zmniejszenie rozmiaru fontu i pozostałych efektów na większych ekranach
     @media screen and (min-width: 992px) {
       top: 0;
       font-size: 28px;
