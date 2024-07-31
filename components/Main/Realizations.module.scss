@@ -121,7 +121,7 @@
     &:focus,
     &:active {
       outline: none; // Usuwa domyślny kontur, który może być wyświetlany podczas kliknięcia
-      color: $color-on-click; // Możesz tu ustawić kolor, który ma być widoczny przy kliknięciu, lub usunąć tę linię
+      color: $red-main; // Możesz tu ustawić kolor, który ma być widoczny przy kliknięciu, lub usunąć tę linię
     }
 
     // Zmniejszenie rozmiaru fontu i pozostałych efektów na większych ekranach
@@ -133,7 +133,7 @@
 
   .close:hover,
   .close:focus {
-    color: #ff0000; // Kolor na hover
+    color: $red-main; // Kolor na hover
     text-decoration: none;
     cursor: pointer;
   }
