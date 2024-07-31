@@ -34,9 +34,12 @@
         margin: 1rem;
         background-color: $dark-smooth;
         border-radius: 0.4rem;
+
         a {
+          width: 100%;
+          height: 100%;
           padding: 1rem;
-          margin: 1rem;
+          margin: 0;
           font-size: 2rem;
         }
       }
