@@ -3,7 +3,7 @@ import classes from "./Realizations.module.scss";
 import Image from "next/image";
 import photo1 from "../../assets/image/hero2_640.jpg";
 import photo2 from "../../assets/image/seasun.jpg";
-import vcardFazar from "../../assets/image/vcard.svg";
+import vcardFazar from "../../assets/image/vcardSvg.svg";
 import Fazar from "../../assets/image/FazarSvg.webp";
 import { useState } from "react";
 
@@ -17,6 +17,7 @@ const Realizations = () => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
   return (
     <section id="realizacje" className={classes.realizations}>
       <h2>Realizacje</h2>
@@ -87,7 +88,7 @@ const Realizations = () => {
           <div className={classes.realizations__boxOne}>
             <h3>Fazar</h3>
             <p>
-              Wizytówka dla <span>usług elektrycznych</span> i{" "}
+              Wizytówka dla usług <span>elektrycznych</span> i{" "}
               <span>teletechnicznych</span>
             </p>
           </div>
