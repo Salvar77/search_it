@@ -21,17 +21,22 @@ $bgGray: #f2f1f6;
 $blue-after: #5b96ac;
 
 $light-blue-gradient: linear-gradient(
-  45deg,
-  rgba(41, 38, 37, 0.65),
-  rgba(46, 50, 52, 0.65)
+  to left bottom,
+  rgba(144, 238, 144, 0.4),
+  rgba(34, 139, 34, 0.717)
 );
-$light-blue-gradient-solid: radial-gradient(
-  circle at top right,
-  rgb(18, 19, 21) 0%,
-  rgb(0, 212, 255) 100%
+$light-blue-gradient-solid: linear-gradient(
+  to left bottom,
+  rgba(255, 182, 193, 0.4),
+  rgba(255, 105, 180, 0.717)
 );
 $blue-gradient-solid: linear-gradient(
-  45deg,
-  rgb(20, 105, 241),
-  rgb(42, 10, 184)
+  to left bottom,
+  rgba(144, 238, 144, 0.4),
+  rgba(34, 139, 34, 0.717)
+);
+$blue-gradient-solid2: linear-gradient(
+  to left bottom,
+  rgba(135, 206, 235, 0.4),
+  /* Jasny niebieski */ rgba(70, 130, 180, 0.717) /* Stalowy niebieski */
 );
