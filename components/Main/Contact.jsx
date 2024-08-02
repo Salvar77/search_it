@@ -68,7 +68,6 @@ const Contact = () => {
           <h2>Wyślij wiadomość</h2>
           <p>Imię</p>
           <input
-            placeholder="twoje imię"
             type="text"
             name="name"
             value={formData.name}
@@ -78,7 +77,6 @@ const Contact = () => {
 
           <p>Email</p>
           <input
-            placeholder="twój email"
             type="email"
             name="email"
             value={formData.email}
@@ -88,7 +86,6 @@ const Contact = () => {
 
           <p>Wiadomość</p>
           <textarea
-            placeholder="twoja wiadomość"
             type="message"
             name="message"
             value={formData.message}
