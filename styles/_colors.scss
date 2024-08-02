@@ -8,7 +8,8 @@ $grey-smooth-5: #f2f1f6;
 $grey-smooth-6: #faf9fa;
 $grey-smooth-7: #c9c9c9d7;
 $white-smooth: #fcfcfc;
-$white-smooth-hover: #f4efef;
+$white-smooth-2: #f3f4ee;
+$white-smooth-hover: #f4f4ef;
 $red-main: #ed0a0ac0;
 $gold-main: #cfb53b;
 // $blue-main: #ffd700;
@@ -46,5 +47,5 @@ $blue-gradient-solid2: linear-gradient(
 $dark-slate-gray: linear-gradient(
   to right bottom,
   rgba(192, 192, 192, 0.3),
-  /* Silver */ rgba(54, 69, 79, 0.7) /* Dark Slate Gray */
+  /* Silver */ rgba(54, 69, 79, 0.6) /* Dark Slate Gray */
 );
