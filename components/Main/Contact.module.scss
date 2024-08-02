@@ -13,8 +13,8 @@
   h2 {
     margin-bottom: 1rem;
     text-align: center;
-    color: $red-main; // Czerwony kolor dla nagłówka
-    font-weight: bold; // Pogrubienie nagłówka
+    color: $red-main;
+    font-weight: bold;
   }
 
   .contactInfo {
@@ -31,8 +31,6 @@
     font-weight: bold;
 
     p {
-      box-shadow: 0.2rem 0.4rem 2rem 0.2rem;
-      background-color: rgba($grey-smooth, 0.7);
       margin-bottom: 0.5rem;
       text-decoration: none;
       &:nth-child(4),
@@ -101,6 +99,7 @@
     p {
       font-weight: bold;
       color: $dark-smooth;
+      margin-left: 0;
     }
 
     input[type="text"],
@@ -113,7 +112,7 @@
       border-radius: 0.4rem;
       background-color: rgba($white-smooth, 0.5);
       border: 1px solid rgba(0, 0, 0, 0.5);
-      box-shadow: 0.2rem 0.4rem 2rem 0.2rem;
+      box-shadow: 0.1rem 0.2rem 1.5rem 0.1rem;
 
       &:focus {
         outline: none;
@@ -237,7 +236,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   justify-content: center;
   border: 1px solid rgba(61, 54, 54, 0.2);
   box-shadow: 0.3rem 0.4rem 0.8rem rgba(235, 232, 232, 0.1);

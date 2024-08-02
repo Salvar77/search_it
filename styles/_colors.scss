@@ -40,3 +40,9 @@ $blue-gradient-solid2: linear-gradient(
   rgba(135, 206, 235, 0.4),
   /* Jasny niebieski */ rgba(70, 130, 180, 0.717) /* Stalowy niebieski */
 );
+
+$dark-slate-gray: linear-gradient(
+  to right bottom,
+  rgba(192, 192, 192, 0.3),
+  /* Silver */ rgba(54, 69, 79, 0.7) /* Dark Slate Gray */
+);

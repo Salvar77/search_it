@@ -8,6 +8,10 @@
     padding: 1rem;
   }
 
+  h3 {
+    color: $grey-smooth-3;
+  }
+
   &__box {
     display: flex;
     flex-direction: column;
@@ -54,7 +58,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: $blue-gradient-solid;
+        background: $blue-gradient-solid2;
         z-index: 1;
       }
     }

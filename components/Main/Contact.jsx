@@ -1,6 +1,7 @@
 import { useState } from "react";
 import classes from "./Contact.module.scss";
 import Link from "next/link";
+import { FaPhoneAlt, FaEnvelope } from "react-icons/fa"; // Import ikon
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -56,14 +57,18 @@ const Contact = () => {
           <h2>Kontakt</h2>
           <p>Ulica: Wojska Polskiego 1-3/40</p>
           <p>Miasto: Opole</p>
-          <p>Telefon: 694004530</p>
-          <p>E-mail:</p>
-          <p>contact@searchit.pl</p>
+          <p>
+            <FaPhoneAlt /> Telefon: 694004530
+          </p>
+          <p>
+            <FaEnvelope /> E-mail: contact@searchit.pl
+          </p>
         </div>
         <form className={classes.contactForm} onSubmit={handleSubmit}>
           <h2>Wyślij wiadomość</h2>
-          <p>Twoje imię</p>
+          <p>Imię</p>
           <input
+            placeholder="twoje imię"
             type="text"
             name="name"
             value={formData.name}
@@ -71,8 +76,9 @@ const Contact = () => {
             required
           />
 
-          <p>Twój email</p>
+          <p>Email</p>
           <input
+            placeholder="twój email"
             type="email"
             name="email"
             value={formData.email}
@@ -80,9 +86,10 @@ const Contact = () => {
             required
           />
 
-          <p>Twoja wiadomość</p>
+          <p>Wiadomość</p>
           <textarea
-            type="messsage"
+            placeholder="twoja wiadomość"
+            type="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
