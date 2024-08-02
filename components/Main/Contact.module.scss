@@ -236,7 +236,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   justify-content: center;
   border: 1px solid rgba(61, 54, 54, 0.2);
   box-shadow: 0.3rem 0.4rem 0.8rem rgba(235, 232, 232, 0.1);
@@ -366,7 +366,9 @@
       }
     }
   }
-
+  .policy {
+    font-size: 1.4rem;
+  }
   .mapWrapper {
     grid-column: 1 / -1;
     display: flex;
