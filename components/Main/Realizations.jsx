@@ -5,35 +5,57 @@ import photo1 from "../../assets/image/hero2_640.jpg";
 import photo2 from "../../assets/image/seasun.jpg";
 import vcardFazar from "../../assets/image/vcardSvg.svg";
 import Fazar from "../../assets/image/FazarSvg.webp";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const SlideInWhenVisible = ({ children, from, delay = 0 }) => {
+const SlideInWhenVisible = ({ children, from, delay = 0, isLast = false }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
   });
 
+  const [direction, setDirection] = useState(from);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 992px)");
+    const handleMediaChange = () => {
+      if (mediaQuery.matches) {
+        if (isLast) {
+          setDirection("bottom"); // Zmiana na animację z dołu tylko dla ostatniego boxa
+        }
+      } else {
+        setDirection(from); // Powrót do domyślnego kierunku dla mniejszych ekranów
+      }
+    };
+
+    mediaQuery.addListener(handleMediaChange);
+    handleMediaChange(); // Inicjalizacja przy montowaniu
+
+    return () => mediaQuery.removeListener(handleMediaChange);
+  }, [from, isLast]);
+
   const variants = {
     hidden: {
-      x: from === "left" ? -150 : 150, // Przesunięcie z lewej lub prawej
+      x: direction === "left" ? -150 : direction === "right" ? 150 : 0,
+      y: direction === "bottom" ? 100 : 0,
       opacity: 0,
     },
     visible: {
       x: 0,
+      y: 0,
       opacity: 1,
-      transition: { delay, duration: 0.5, ease: "easeInOut" },
+      transition: { delay, duration: 0.4, ease: "easeInOut" },
     },
   };
 
   return (
     <motion.div
-      className={`realizations__motionDiv ${classes.realizations__boxOT}`} // Dopasowanie stylów
       ref={ref}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       variants={variants}
+      className={`realizations__motionDiv ${classes.realizations__boxOT}`}
     >
       {children}
     </motion.div>
@@ -106,7 +128,7 @@ const Realizations = () => {
           </div>
         </SlideInWhenVisible>
 
-        <SlideInWhenVisible from="left" delay={0.6}>
+        <SlideInWhenVisible from="left" delay={0.6} isLast={true}>
           <div className={classes.realizations__boxOT}>
             <div className={classes.realizations__boxImg}>
               <Image

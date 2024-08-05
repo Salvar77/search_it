@@ -8,7 +8,7 @@ import { useInView } from "react-intersection-observer";
 const SlideInWhenVisible = ({ children, from, delay = 0 }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.6,
+    threshold: 0.3,
   });
 
   const variants = {
@@ -19,7 +19,7 @@ const SlideInWhenVisible = ({ children, from, delay = 0 }) => {
     visible: {
       x: 0,
       opacity: 1,
-      transition: { delay: delay, duration: 0.5, ease: "easeInOut" },
+      transition: { delay: delay, duration: 0.4, ease: "easeInOut" },
     },
   };
 

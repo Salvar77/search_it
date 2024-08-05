@@ -8,6 +8,7 @@ import heroImageDesktop from "../../assets/image/hero_1920.jpg";
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState(heroImageMobile);
   const [viewportHeight, setViewportHeight] = useState(null);
+  const [textStyle, setTextStyle] = useState({ filter: "blur(5px)" });
 
   useEffect(() => {
     const updateHeroHeight = () => {
@@ -34,6 +35,15 @@ const Hero = () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
   });
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTextStyle({ filter: "blur(0px)" });
+    }, 400);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section id="hero" className={classes.hero}>
       <div className={classes.imageContainer}>
@@ -45,7 +55,7 @@ const Hero = () => {
           priority
         />
       </div>
-      <div className={classes.textOverlay}>
+      <div className={classes.textOverlay} style={textStyle}>
         <h1 className={classes.hero__title}>
           Search <span className={classes.hero__title__span}>IT</span>
         </h1>

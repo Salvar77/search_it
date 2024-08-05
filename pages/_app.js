@@ -36,7 +36,6 @@ export default function App({ Component, pageProps }) {
         <Nav isOpen={isOpen} toggleNav={toggleNav} />
         <Suspense fallback={<div>Loading...</div>}>
           {" "}
-          {/* Dodanie Suspense dla obsługi ładowania komponentu */}
           <BurgerMenu isOpen={isOpen} handleOpen={toggleNav} />
         </Suspense>
       </header>
