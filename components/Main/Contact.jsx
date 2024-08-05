@@ -1,7 +1,7 @@
 import { useState } from "react";
 import classes from "./Contact.module.scss";
 import Link from "next/link";
-import { FaPhoneAlt, FaEnvelope } from "react-icons/fa"; // Import ikon
+import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
   const [formData, setFormData] = useState({

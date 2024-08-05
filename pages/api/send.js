@@ -24,7 +24,6 @@ export default async function handler(req, res) {
     text: `Nowa wiadomość od: ${name} \nEmail: ${email} \nTreść wiadomości: ${message}`,
   };
 
-  // Wysyłanie głównej wiadomości
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log(error);
@@ -34,10 +33,9 @@ export default async function handler(req, res) {
     } else {
       console.log("E-mail wysłany: " + info.response);
 
-      // Automatyczne potwierdzenie odbioru dla użytkownika
       const confirmationMailOptions = {
         from: "contact@searchit.pl",
-        to: email, // Adres e-mail użytkownika
+        to: email,
         subject: "Potwierdzenie otrzymania wiadomości",
         text: `Dziękujemy ${name}. 
         Twoja wiadomość została pomyślnie odebrana. Skontaktujemy się z Tobą wkrótce z odpowiedzią.`,

@@ -30,7 +30,6 @@
       background-color: rgba($grey-smooth, 0.4);
       border-radius: 0.4rem;
       width: 100%;
-      // min-height: 100%;
 
       p {
         color: $white-smooth;
@@ -124,7 +123,6 @@
       color: $red-main;
     }
 
-    // Zmniejszenie rozmiaru fontu i pozostałych efektów na większych ekranach
     @media screen and (min-width: 992px) {
       top: 0;
       font-size: 28px;
@@ -203,15 +201,12 @@
   --hover-btn-color: #cfb53b;
   --default-btn-color: #fff;
   --font-size: 16px;
-  /* 👆 this field should not be empty */
+
   --font-weight: 600;
   --font-family: Menlo, Roboto Mono, monospace;
   border-radius: 0.4rem;
   z-index: 1;
-  /* 👆 this field should not be empty */
 }
-
-/* button settings 👆 */
 
 .uiBtn {
   box-sizing: border-box;
