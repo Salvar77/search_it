@@ -10,7 +10,10 @@ import { SiAdobexd } from "react-icons/si";
 import { TbSeo } from "react-icons/tb";
 import { FaNpm } from "react-icons/fa";
 import { SiGulp } from "react-icons/si";
+import { SiStripe } from "react-icons/si";
+import StripeLogo from "../../assets/image/StripeLogoRed.svg";
 import classes from "./AboutMe.module.scss";
+import Image from "next/image";
 
 const AboutMe = () => {
   return (
@@ -84,6 +87,15 @@ const AboutMe = () => {
               {" "}
               <SiGulp className={classes.aboutMe__icon} />
               GULP
+            </p>
+            <p>
+              {" "}
+              <Image
+                src={StripeLogo}
+                alt="Stripe"
+                className={classes.aboutMe__icon}
+              />{" "}
+              Stripe
             </p>
           </div>
         </div>

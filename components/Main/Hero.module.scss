@@ -61,18 +61,18 @@
   margin: 0 auto;
   padding: 0.8rem 1.4rem;
   font-size: 1.6rem;
-  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; // Dodano transform do animacji
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
   border-radius: 0.3rem;
   color: $dark-smooth;
   background-color: $white-smooth;
-  box-shadow: 0.2rem 0.4rem 0.6rem rgba(0, 0, 0, 0.2); // Subtelniejszy cień domyślny
+  box-shadow: 0.2rem 0.4rem 0.6rem rgba(0, 0, 0, 0.2);
   text-decoration: none;
 
   &:hover {
     box-shadow: 0.5rem 0.8rem 1rem rgba(0, 0, 0, 0.4),
       // Głębszy cień na hover
-      0 0 1rem rgba(168, 67, 49, 0.5); // Dodatkowy, rozproszony cień
-    transform: scale(1.05); // Lekkie powiększenie na hover
+      0 0 1rem rgba(168, 67, 49, 0.5);
+    transform: scale(1.05);
   }
 }
 

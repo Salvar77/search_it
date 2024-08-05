@@ -13,13 +13,13 @@ export default async function handler(req, res) {
     },
 
     tls: {
-      rejectUnauthorized: false, // Ignoruje błędy związane z certyfikatem SSL
+      rejectUnauthorized: false,
     },
   });
 
   const mailOptions = {
     from: "contact@searchit.pl",
-    to: "contact@searchit.pl", // Funkcja wybierająca odbiorcę na podstawie domeny klienta
+    to: "contact@searchit.pl",
     subject: "Wiadomość z formularza kontaktowego",
     text: `Nowa wiadomość od: ${name} \nEmail: ${email} \nTreść wiadomości: ${message}`,
   };

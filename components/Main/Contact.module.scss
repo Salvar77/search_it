@@ -42,14 +42,14 @@
 
   .successMessage,
   .errorMessage {
-    position: fixed; // Elementy są umieszczone względem okna przeglądarki
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%; // Szerokość na całą szerokość ekranu
-    height: 100%; // Wysokość na całą wysokość ekranu
+    width: 100%;
+    height: 100%;
     display: flex;
-    align-items: center; // Centruje treść w pionie
-    justify-content: center; // Centruje treść w poziomie
+    align-items: center;
+    justify-content: center;
     color: $white-smooth;
     font-size: 2rem;
     text-align: center;
@@ -58,21 +58,11 @@
   }
 
   .successMessage {
-    background-color: rgba(
-      34,
-      139,
-      34,
-      0.9
-    ); // Zielony z lekką przezroczystością
+    background-color: rgba(34, 139, 34, 0.9);
   }
 
   .errorMessage {
-    background-color: rgba(
-      220,
-      20,
-      60,
-      0.9
-    ); // Czerwony z lekką przezroczystością
+    background-color: rgba(220, 20, 60, 0.9);
   }
 
   .contactInfo,
@@ -221,8 +211,7 @@
   box-shadow: 0.3rem 0.4rem 0.8rem rgba(235, 232, 232, 0.1);
 
   input[type="checkbox"]:checked {
-    background-color: $blue-after; /* Kolor tła po zaznaczeniu */
-    border-color: $blue-after; /* Kolor obramowania po zaznaczeniu */
+    background-color: $blue-after;
   }
 
   label {

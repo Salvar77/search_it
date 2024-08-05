@@ -1,7 +1,6 @@
 @import "../../styles/colors";
 
 .aboutMe {
-  // position: relative;
   padding: 1rem;
 
   &__boxes {
@@ -79,7 +78,6 @@
 }
 
 .aboutMe__boxes p {
-  //   background-color: $white-smooth;
   padding: 2rem;
   margin: 1rem;
   text-align: center;
@@ -89,19 +87,23 @@
   color: $red-main;
   height: 4rem;
   width: 3rem;
-  margin: 1rem;
+  margin: 0.8rem;
   text-align: center;
+
+  span {
+    color: $dark-smooth;
+  }
 }
 
 .aboutMe__mainSkills p,
 .aboutMe__additionalSkills p {
-  position: relative; /* Ustaw kontener paragrafu na relative */
+  position: relative;
 }
 
 .aboutMe__icon,
 .aboutMe__mainSkills p span,
 .aboutMe__additionalSkills p span {
-  position: absolute; /* Ustaw ikonę i tekst na absolute */
+  position: absolute;
   top: 30%;
   left: 28%;
   transform: translate(-50%, -50%);
@@ -109,13 +111,10 @@
 
 .aboutMe__boxesThree .aboutMe__icon,
 .aboutMe__boxesThree p span {
-  position: absolute; /* Ustaw ikonę i tekst na absolute */
-  top: 30%; /* Dostosuj wartość, aby wyśrodkować w pionie względem potrzeb boxesThree */
-  left: 35%; /* Dostosuj wartość, aby wyśrodkować w poziomie względem potrzeb boxesThree */
-  transform: translate(
-    -50%,
-    -50%
-  ); /* Zachowaj, aby wyśrodkować dokładnie w środku kontenera */
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  transform: translate(-50%, -50%);
 }
 
 @media (min-width: 768px) {
@@ -160,8 +159,8 @@
     }
 
     &__icon {
-      width: 6rem;
-      height: 6rem;
+      width: 5rem;
+      height: 5rem;
     }
 
     &__boxesTwo,
