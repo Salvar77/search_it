@@ -16,7 +16,6 @@ const Hero = () => {
 
     window.addEventListener("resize", updateHeroHeight);
 
-    // Ustawienie początkowej wysokości
     updateHeroHeight();
 
     return () => window.removeEventListener("resize", updateHeroHeight);
