@@ -10,7 +10,8 @@ import { SiAdobexd } from "react-icons/si";
 import { TbSeo } from "react-icons/tb";
 import { FaNpm } from "react-icons/fa";
 import { SiGulp } from "react-icons/si";
-import { SiStripe } from "react-icons/si";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import StripeLogo from "../../assets/image/StripeLogoRed.svg";
 import classes from "./AboutMe.module.scss";
 import Image from "next/image";
@@ -23,13 +24,15 @@ const AboutMe = () => {
           <h2 className={classes.aboutMe__header}>O mnie</h2>
           <p className={classes.aboutMe__text}>
             Jestem Łukasz. Web Developmentem zajmuje się od Września 2022 roku,
-            a firma Search <span className={classes.span}> IT </span>zajmuje się
+            a firma Search <span className={classes.span}> IT </span>
+            zajmuje się
             <span className={classes.span}> tworzeniem stron WWW</span>, oraz
             <span className={classes.span}> aplikacji webowych</span>,
             dostosowanych{" "}
             <span className={classes.span}> do potrzeb Twojej firmy</span>.
           </p>
         </div>
+
         <div className={classes.aboutMe__boxesTwo}>
           <div className={classes.aboutMe__mainSkills}>
             <h2 className={classes.aboutMe__subTitle}>Umiejętności</h2>

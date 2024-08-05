@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react";
+import React from "react";
+import { useState, useEffect, Suspense } from "react";
 import "@/styles/globals.scss";
 import "hamburgers/dist/hamburgers.min.css";
 import Logo from "@/components/Nav/Logo";
 import Nav from "@/components/Nav/Nav";
-import BurgerMenu from "@/components/Nav/BurgerMenu";
 import Footer from "@/components/Footer/Footer";
+
+const BurgerMenu = React.lazy(() => import("@/components/Nav/BurgerMenu")); // Dynamiczne importowanie komponentu BurgerMenu
 
 export default function App({ Component, pageProps }) {
   const [showLogo, setShowLogo] = useState(true);
@@ -26,15 +28,19 @@ export default function App({ Component, pageProps }) {
   const toggleNav = () => {
     setIsOpen(!isOpen);
   };
+
   return (
     <>
       <header>
         <Logo showLogo={showLogo} />
         <Nav isOpen={isOpen} toggleNav={toggleNav} />
-        <BurgerMenu isOpen={isOpen} handleOpen={toggleNav} />
+        <Suspense fallback={<div>Loading...</div>}>
+          {" "}
+          {/* Dodanie Suspense dla obsługi ładowania komponentu */}
+          <BurgerMenu isOpen={isOpen} handleOpen={toggleNav} />
+        </Suspense>
       </header>
       <div className="app-background">
-        {" "}
         <Component {...pageProps} />
       </div>
 
