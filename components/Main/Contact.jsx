@@ -14,6 +14,10 @@ const Contact = () => {
   const [showModal, setShowModal] = useState(false);
   const [consent, setConsent] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [animationClass, setAnimationClass] = useState({
+    contactInfo: "contact__hidden",
+    contactForm: "contact__hidden",
+  });
   const sectionRef = useRef(null);
 
   const handleSubmit = async (e) => {
@@ -57,6 +61,10 @@ const Contact = () => {
       (entries) => {
         if (entries[0].isIntersecting) {
           setIsVisible(true);
+          setAnimationClass({
+            contactInfo: "contact__boxOT--fromLeft",
+            contactForm: "contact__boxOT--fromRight",
+          });
           observer.disconnect();
         }
       },
@@ -80,7 +88,7 @@ const Contact = () => {
       <section id="kontakt" className={classes.contactSection} ref={sectionRef}>
         <div
           className={`${classes.contactInfo} ${
-            isVisible ? classes.contactInfoVisible : classes.contactInfoHidden
+            classes[animationClass.contactInfo]
           }`}
         >
           <h2>Kontakt</h2>
@@ -96,7 +104,7 @@ const Contact = () => {
 
         <form
           className={`${classes.contactForm} ${
-            isVisible ? classes.contactFormVisible : classes.contactFormHidden
+            classes[animationClass.contactForm]
           }`}
           onSubmit={handleSubmit}
         >
