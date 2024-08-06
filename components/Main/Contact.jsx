@@ -2,38 +2,6 @@ import { useState } from "react";
 import classes from "./Contact.module.scss";
 import Link from "next/link";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-
-const SlideInWhenVisible = ({ children, from, delay = 0 }) => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.3,
-  });
-
-  const variants = {
-    hidden: {
-      x: from === "left" ? -100 : 100, // Ustalamy przesunięcie na podstawie kierunku
-      opacity: 0,
-    },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { delay: delay, duration: 0.4, ease: "easeInOut" },
-    },
-  };
-
-  return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      variants={variants}
-    >
-      {children}
-    </motion.div>
-  );
-};
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -85,72 +53,69 @@ const Contact = () => {
   return (
     <>
       <section id="kontakt" className={classes.contactSection}>
-        <SlideInWhenVisible from="left" delay={0.2}>
-          <div className={classes.contactInfo}>
-            <h2>Kontakt</h2>
-            <p>Ulica: Wojska Polskiego 1-3/40</p>
-            <p>Miasto: Opole</p>
-            <p>
-              <FaPhoneAlt /> Telefon: 694004530
-            </p>
-            <p>
-              <FaEnvelope /> E-mail: contact@searchit.pl
-            </p>
+        <div className={classes.contactInfo}>
+          <h2>Kontakt</h2>
+          <p>Ulica: Wojska Polskiego 1-3/40</p>
+          <p>Miasto: Opole</p>
+          <p>
+            <FaPhoneAlt /> Telefon: 694004530
+          </p>
+          <p>
+            <FaEnvelope /> E-mail: contact@searchit.pl
+          </p>
+        </div>
+
+        <form className={classes.contactForm} onSubmit={handleSubmit}>
+          <h2>Wyślij wiadomość</h2>
+          <p>Imię</p>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+
+          <p>Email</p>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+
+          <p>Wiadomość</p>
+          <textarea
+            type="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          ></textarea>
+          <div className={classes.consentWrapper}>
+            <input
+              type="checkbox"
+              id="rodoConsent"
+              checked={consent}
+              onChange={() => setConsent(!consent)}
+              required
+            />
+            <label htmlFor="rodoConsent">
+              Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z
+              ustawą o ochronie danych osobowych w związku z wysłaniem zapytania
+              przez formularz kontaktowy. Podanie danych jest dobrowolne, ale
+              niezbędne do przetworzenia zapytania. Zostałem poinformowany, że
+              przysługuje mi prawo dostępu do swoich danych, możliwość ich
+              poprawienia oraz żądanie zaprzestania ich przetwarzania.
+              Administratorem danych osobowych jest Łukasz Kuś Search IT, ul.
+              Wojska Polskiego 1-3/40.
+            </label>
           </div>
-        </SlideInWhenVisible>
-        <SlideInWhenVisible from="right" delay={0.3}>
-          <form className={classes.contactForm} onSubmit={handleSubmit}>
-            <h2>Wyślij wiadomość</h2>
-            <p>Imię</p>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-
-            <p>Email</p>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-
-            <p>Wiadomość</p>
-            <textarea
-              type="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-            <div className={classes.consentWrapper}>
-              <input
-                type="checkbox"
-                id="rodoConsent"
-                checked={consent}
-                onChange={() => setConsent(!consent)}
-                required
-              />
-              <label htmlFor="rodoConsent">
-                Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z
-                ustawą o ochronie danych osobowych w związku z wysłaniem
-                zapytania przez formularz kontaktowy. Podanie danych jest
-                dobrowolne, ale niezbędne do przetworzenia zapytania. Zostałem
-                poinformowany, że przysługuje mi prawo dostępu do swoich danych,
-                możliwość ich poprawienia oraz żądanie zaprzestania ich
-                przetwarzania. Administratorem danych osobowych jest Łukasz Kuś
-                Search IT, ul. Wojska Polskiego 1-3/40.
-              </label>
-            </div>
-            <button href="#" className={classes.uiBtn}>
-              <span>Wyślij</span>
-            </button>
-          </form>
-        </SlideInWhenVisible>
+          <button href="#" className={classes.uiBtn}>
+            <span>Wyślij</span>
+          </button>
+        </form>
 
         {showModal && (
           <div className={classes.modal} onClick={closeModal}>
