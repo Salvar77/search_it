@@ -5,10 +5,12 @@ import photo1 from "../../assets/image/hero2_640.jpg";
 import photo2 from "../../assets/image/seasun.jpg";
 import vcardFazar from "../../assets/image/vcardSvg.svg";
 import Fazar from "../../assets/image/FazarSvg.webp";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Realizations = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -18,13 +20,35 @@ const Realizations = () => {
     setIsModalOpen(false);
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
-    <section id="realizacje" className={classes.realizations}>
+    <section id="realizacje" className={classes.realizations} ref={sectionRef}>
       <h2>Realizacje</h2>
 
       <div className={classes.realizations__box}>
         <div
-          className={`${classes.realizations__boxOT} ${classes["realizations__boxOT--fromLeft"]}`}
+          className={`${classes.realizations__boxOT} ${
+            isVisible ? classes["realizations__boxOT--fromLeft"] : ""
+          }`}
         >
           <div className={classes.realizations__boxImg}>
             <Image
@@ -49,7 +73,9 @@ const Realizations = () => {
         </div>
 
         <div
-          className={`${classes.realizations__boxOT} ${classes["realizations__boxOT--fromRight"]}`}
+          className={`${classes.realizations__boxOT} ${
+            isVisible ? classes["realizations__boxOT--fromRight"] : ""
+          }`}
         >
           <div className={classes.realizations__boxImg}>
             <Image
@@ -72,9 +98,10 @@ const Realizations = () => {
             </p>
           </div>
         </div>
-
         <div
-          className={`${classes.realizations__boxOT} ${classes["realizations__boxOT--fromLeft"]}`}
+          className={`${classes.realizations__boxOT} ${
+            isVisible ? classes["realizations__boxOT--fromLeft"] : ""
+          }`}
         >
           <div className={classes.realizations__boxImg}>
             <Image
