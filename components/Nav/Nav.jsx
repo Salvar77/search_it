@@ -34,9 +34,6 @@ const Nav = ({ isOpen, toggleNav }) => {
         <div className={classes.nav__items}>
           <ul aria-hidden className={classes.nav__item}>
             <li onClick={handleToggleNav}>
-              <Link href="/#">Home</Link>
-            </li>
-            <li onClick={handleToggleNav}>
               <Link href="/#O-mnie">O mnie</Link>
             </li>
             <li onClick={handleToggleNav}>
