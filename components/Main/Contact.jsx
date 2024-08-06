@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import classes from "./Contact.module.scss";
 import Link from "next/link";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
@@ -13,6 +13,8 @@ const Contact = () => {
   const [messageStatus, setMessageStatus] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [consent, setConsent] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -46,14 +48,41 @@ const Contact = () => {
   };
 
   const closeModal = () => {
-    setShowModal(false); // Zamknij modal po kliknięciu
-    setMessageStatus(null); // Opcjonalnie wyczyść status wiadomości
+    setShowModal(false);
+    setMessageStatus(null);
   };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    const currentSection = sectionRef.current;
+    if (currentSection) {
+      observer.observe(currentSection);
+    }
+
+    return () => {
+      if (observer && currentSection) {
+        observer.disconnect();
+      }
+    };
+  }, []);
 
   return (
     <>
-      <section id="kontakt" className={classes.contactSection}>
-        <div className={classes.contactInfo}>
+      <section id="kontakt" className={classes.contactSection} ref={sectionRef}>
+        <div
+          className={`${classes.contactInfo} ${
+            isVisible ? classes.contactInfoVisible : classes.contactInfoHidden
+          }`}
+        >
           <h2>Kontakt</h2>
           <p>Ulica: Wojska Polskiego 1-3/40</p>
           <p>Miasto: Opole</p>
@@ -65,7 +94,12 @@ const Contact = () => {
           </p>
         </div>
 
-        <form className={classes.contactForm} onSubmit={handleSubmit}>
+        <form
+          className={`${classes.contactForm} ${
+            isVisible ? classes.contactFormVisible : classes.contactFormHidden
+          }`}
+          onSubmit={handleSubmit}
+        >
           <h2>Wyślij wiadomość</h2>
           <p>Imię</p>
           <input

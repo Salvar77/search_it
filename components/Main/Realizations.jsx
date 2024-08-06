@@ -59,12 +59,13 @@ const Realizations = () => {
       { threshold: 0.4 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentSection = sectionRef.current;
+    if (currentSection) {
+      observer.observe(currentSection);
     }
 
     return () => {
-      if (observer && sectionRef.current) {
+      if (observer && currentSection) {
         observer.disconnect();
       }
     };

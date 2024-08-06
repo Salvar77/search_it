@@ -235,6 +235,46 @@
   }
 }
 
+.contactInfoHidden {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.contactFormHidden {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.contactInfoVisible {
+  animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+.contactFormVisible {
+  animation: slideInFromRight 0.8s ease-out forwards;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @keyframes chitchat {
   0% {
     content: "#";
