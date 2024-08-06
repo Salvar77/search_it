@@ -340,17 +340,16 @@
 }
 .realizations__boxOT--fromLeftThree {
   animation: slideInFromLeft 0.8s ease-out forwards;
-  animation-delay: 1s;
+  animation-delay: 0.5s;
 }
 
 .realizations__boxOT--fromRight {
   animation: slideInFromRight 0.8s ease-out forwards;
-  animation-delay: 0.3s;
+  // animation-delay: 0.2s;
 }
 
 .realizations__boxOT--fromBottom {
   animation: slideInFromBottom 0.8s ease-out forwards;
-  animation-delay: 0.5s;
 }
 
 @keyframes slideInFromLeft {
