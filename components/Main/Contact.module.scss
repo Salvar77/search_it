@@ -363,11 +363,11 @@
 }
 
 .contact__boxOT--fromLeft {
-  animation: slideInFromLeft 0.8s ease-out forwards;
+  animation: slideInFromLeft 0.5s ease-out forwards;
 }
 
 .contact__boxOT--fromRight {
-  animation: slideInFromRight 0.8s ease-out forwards;
+  animation: slideInFromRight 0.5s ease-out forwards;
 }
 
 @keyframes slideInFromLeft {
