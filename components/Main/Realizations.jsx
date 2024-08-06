@@ -10,6 +10,11 @@ import { useState, useRef, useEffect } from "react";
 const Realizations = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [animationClass, setAnimationClass] = useState({
+    boxOne: "realizations__boxOT--fromLeft",
+    boxTwo: "realizations__boxOT--fromRight",
+    boxThree: "realizations__boxOT--fromBottom",
+  });
   const sectionRef = useRef(null);
 
   const openModal = () => {
@@ -19,6 +24,22 @@ const Realizations = () => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 992px)");
+    const handleMediaChange = (event) => {
+      setAnimationClass((prev) => ({
+        ...prev,
+        boxThree: event.matches
+          ? "realizations__boxOT--fromBottom"
+          : "realizations__boxOT--fromLeftThree",
+      }));
+    };
+
+    mediaQuery.addEventListener("change", handleMediaChange);
+    handleMediaChange(mediaQuery);
+    return () => mediaQuery.removeEventListener("change", handleMediaChange);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -36,7 +57,9 @@ const Realizations = () => {
     }
 
     return () => {
-      observer.disconnect();
+      if (observer && sectionRef.current) {
+        observer.disconnect();
+      }
     };
   }, []);
 
@@ -47,7 +70,9 @@ const Realizations = () => {
       <div className={classes.realizations__box}>
         <div
           className={`${classes.realizations__boxOT} ${
-            isVisible ? classes["realizations__boxOT--fromLeft"] : ""
+            isVisible
+              ? classes[animationClass.boxOne]
+              : classes.realizations__hidden
           }`}
         >
           <div className={classes.realizations__boxImg}>
@@ -71,10 +96,11 @@ const Realizations = () => {
             </p>
           </div>
         </div>
-
         <div
           className={`${classes.realizations__boxOT} ${
-            isVisible ? classes["realizations__boxOT--fromRight"] : ""
+            isVisible
+              ? classes[animationClass.boxTwo]
+              : classes.realizations__hidden
           }`}
         >
           <div className={classes.realizations__boxImg}>
@@ -100,7 +126,9 @@ const Realizations = () => {
         </div>
         <div
           className={`${classes.realizations__boxOT} ${
-            isVisible ? classes["realizations__boxOT--fromLeft"] : ""
+            isVisible
+              ? classes[animationClass.boxThree]
+              : classes.realizations__hidden
           }`}
         >
           <div className={classes.realizations__boxImg}>
