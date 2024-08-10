@@ -14,7 +14,7 @@ export default function Home() {
         </title>
         <meta
           property="og:image"
-          content="https://www.searchit.pl/logoJpg.jpg"
+          content="https://www.searchit.pl/logoJpg1.jpg"
         />
         <meta
           name="description"
