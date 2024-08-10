@@ -27,8 +27,7 @@ const AboutMe = () => {
             a firma Search <span className={classes.span}> IT </span>
             zajmuje się
             <span className={classes.span}> tworzeniem stron WWW</span>, oraz
-            <span className={classes.span}> aplikacji webowych</span>,
-            dostosowanych{" "}
+            <span className={classes.span}> e-sklepów</span>, dostosowanych{" "}
             <span className={classes.span}> do potrzeb Twojej firmy</span>.
           </p>
         </div>

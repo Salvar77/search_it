@@ -9,14 +9,16 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Search IT - Usługi tworzenia stron i aplikacji webowych.</title>
+        <title>
+          Search IT - Usługi tworzenia stron i sklepów internetowych
+        </title>
         <meta
           property="og:image"
-          content="https://www.searchit.pl/metafoto.jpg"
+          content="https://www.searchit.pl/logoJpg.jpg"
         />
         <meta
           name="description"
-          content="Search IT - Usługi tworzenia stron i aplikacji webowych"
+          content="Search IT - Usługi tworzenia stron i sklepów internetowych"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>

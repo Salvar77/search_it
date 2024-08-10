@@ -59,7 +59,7 @@ const Hero = () => {
         <h1 className={classes.hero__title}>
           Search <span className={classes.hero__title__span}>IT</span>
         </h1>
-        <p>Usługi tworzenia stron WWW oraz aplikacji webowych</p>
+        <p>Usługi tworzenia stron i sklepów internetowych</p>
         <Link href="#realizacje" className={classes.button}>
           Realizacje
         </Link>
