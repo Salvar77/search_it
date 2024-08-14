@@ -178,7 +178,7 @@ const Contact = () => {
         )}
         <div className={classes.mapWrapper}>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2529.1128671833394!2d17.89581004215001!3d50.66216491189781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471052e5d82abfdd%3A0xb12c26ade1a5fdc0!2sWojska%20Polskiego%201%2F40%2C%2046-020%20Opole!5e0!3m2!1spl!2spl!4v1723403011215!5m2!1spl!2spl"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.1326566424623!2d17.892470193570723!3d50.66216619896289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4710538ba6e9ea87%3A0xf140850aa2ecff86!2sSearch%20IT!5e1!3m2!1spl!2spl!4v1723646595080!5m2!1spl!2spl"
             width="100%"
             height="350"
             style={{ border: 0 }}
