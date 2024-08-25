@@ -76,11 +76,7 @@ const Realizations = () => {
       <h2>Realizacje</h2>
 
       <div className={classes.realizations__box}>
-        <div
-          className={`${classes.realizations__boxOT} ${
-            classes[animationClass.boxOne]
-          }`}
-        >
+        <div className={classes.realizations__boxOT}>
           <div className={classes.realizations__boxImg}>
             <Image
               className={classes.realizations__img}

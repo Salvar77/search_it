@@ -8,7 +8,7 @@ import heroImageDesktop from "../../assets/image/hero_1920.jpg";
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState(heroImageMobile);
   const [viewportHeight, setViewportHeight] = useState(null);
-  const [textStyle, setTextStyle] = useState({ filter: "blur(5px)" });
+  const [textStyle, setTextStyle] = useState({ filter: "blur(3px)" });
 
   useEffect(() => {
     const updateHeroHeight = () => {

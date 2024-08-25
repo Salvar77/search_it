@@ -234,49 +234,49 @@
     font-weight: bold;
   }
 }
-.contactInfoHidden {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateX(-100%);
-}
+// .contactInfoHidden {
+//   opacity: 0;
+//   visibility: hidden;
+//   transform: translateX(-100%);
+// }
 
-.contactFormHidden {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateX(100%);
-}
+// .contactFormHidden {
+//   opacity: 0;
+//   visibility: hidden;
+//   transform: translateX(100%);
+// }
 
-.contactInfoVisible {
-  animation: slideInFromLeft 0.8s ease-out forwards;
-  visibility: visible;
-}
+// .contactInfoVisible {
+//   animation: slideInFromLeft 0.8s ease-out forwards;
+//   visibility: visible;
+// }
 
-.contactFormVisible {
-  animation: slideInFromRight 0.8s ease-out forwards;
-  visibility: visible;
-}
+// .contactFormVisible {
+//   animation: slideInFromRight 0.8s ease-out forwards;
+//   visibility: visible;
+// }
 
-@keyframes slideInFromLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+// @keyframes slideInFromLeft {
+//   0% {
+//     opacity: 0;
+//     transform: translateX(-100%);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: translateX(0);
+//   }
+// }
 
-@keyframes slideInFromRight {
-  0% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+// @keyframes slideInFromRight {
+//   0% {
+//     opacity: 0;
+//     transform: translateX(100%);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: translateX(0);
+//   }
+// }
 
 @keyframes chitchat {
   0% {
@@ -353,55 +353,55 @@
   }
 }
 
-.contact__hidden {
-  opacity: 0;
-  visibility: hidden;
-}
+// .contact__hidden {
+//   opacity: 0;
+//   visibility: hidden;
+// }
 
-.contact__visible {
-  animation: fadeIn 0.5s ease-out forwards;
-}
+// .contact__visible {
+//   animation: fadeIn 0.5s ease-out forwards;
+// }
 
-.contact__boxOT--fromLeft {
-  animation: slideInFromLeft 0.5s ease-out forwards;
-}
+// .contact__boxOT--fromLeft {
+//   animation: slideInFromLeft 0.5s ease-out forwards;
+// }
 
-.contact__boxOT--fromRight {
-  animation: slideInFromRight 0.5s ease-out forwards;
-}
+// .contact__boxOT--fromRight {
+//   animation: slideInFromRight 0.5s ease-out forwards;
+// }
 
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
+// @keyframes slideInFromLeft {
+//   0% {
+//     transform: translateX(-100%);
+//     opacity: 0;
+//   }
+//   100% {
+//     transform: translateX(0);
+//     opacity: 1;
+//   }
+// }
 
-@keyframes slideInFromRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
+// @keyframes slideInFromRight {
+//   0% {
+//     transform: translateX(100%);
+//     opacity: 0;
+//   }
+//   100% {
+//     transform: translateX(0);
+//     opacity: 1;
+//   }
+// }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    visibility: visible;
-  }
-  to {
-    opacity: 1;
-    visibility: visible;
-  }
-}
+// @keyframes fadeIn {
+//   from {
+//     opacity: 0;
+//     visibility: visible;
+//   }
+//   to {
+//     opacity: 1;
+//     visibility: visible;
+//   }
+// }
 
 @media (min-width: 768px) {
   .contactSection {

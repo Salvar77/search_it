@@ -23,12 +23,16 @@ const AboutMe = () => {
         <div className={classes.aboutMe__boxesOne}>
           <h2 className={classes.aboutMe__header}>O mnie</h2>
           <p className={classes.aboutMe__text}>
-            Jestem Łukasz. Web Developmentem zajmuje się od Września 2022 roku,
-            a firma Search <span className={classes.span}> IT </span>
-            zajmuje się
-            <span className={classes.span}> tworzeniem stron WWW</span>, oraz
-            <span className={classes.span}> e-sklepów</span>, dostosowanych{" "}
-            <span className={classes.span}> do potrzeb Twojej firmy</span>.
+            Nazywam się Łukasz i jestem{" "}
+            <span className={classes.span}>Full-Stack Developerem</span>.
+            Reprezentuję firmę <span className={classes.span}>Search IT</span>,
+            która specjalizuje się w projektowaniu{" "}
+            <span className={classes.span}> funkcjonalnych stron WWWW </span>
+            oraz <span className={classes.span}>
+              sklepów internetowych
+            </span>{" "}
+            dostosowanych do potrzeb{" "}
+            <span className={classes.span}>Twojej firmy</span>.
           </p>
         </div>
 
