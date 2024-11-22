@@ -6,7 +6,7 @@ import Logo from "@/components/Nav/Logo";
 import Nav from "@/components/Nav/Nav";
 import Footer from "@/components/Footer/Footer";
 
-const BurgerMenu = React.lazy(() => import("@/components/Nav/BurgerMenu")); // Dynamiczne importowanie komponentu BurgerMenu
+const BurgerMenu = React.lazy(() => import("@/components/Nav/BurgerMenu"));
 
 export default function App({ Component, pageProps }) {
   const [showLogo, setShowLogo] = useState(true);
